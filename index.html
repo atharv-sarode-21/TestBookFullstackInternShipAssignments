@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+
+.uif{
+border-style: dashed;
+padding-left: 8px;
+padding-right: 8px;
+padding-top: 10px;
+background-color:yellow;
+margin-right: 1200px;
+margin-left: 100px;
+}
+
+.bt{
+padding-bottom: 10px;
+padding-left: 60px;
+}
+
+</style>
+
+
+
+
+<body >
+<div style="align-content: center;">
+    <table border="10px" cellspacing="26px" cellpadding="10px" style="padding-left: 1px; background-color: aquamarine;" >
+
+<tr>
+<th>Atharv</th>
+<td  colspan="4"><input type="text" id="result" readonly style="width: 300px; height: 30px;"></td>
+</tr>
+<tr>
+<td><button onclick="appendValue('7')">7</button></td>
+<td><button onclick="appendValue('8')">8</button></td>
+<td><button onclick="appendValue('9')">9</button></td>
+<td><button onclick="appendValue('0')">0</button></td>
+
+</tr>
+
+
+<tr>
+    <td><button onclick="appendValue('6')">6</button></td>
+    <td><button onclick="appendValue('5')">5</button></td>
+    <td><button onclick="appendValue('4')">4</button></td>
+    <td><button onclick="appendValue('3')">3</button></td>
+</tr>
+
+
+<tr>
+    <td><button onclick="appendValue('2')">2</button></td>
+    <td><button onclick="appendValue('1')">1</button></td>
+    <td><button onclick="appendValue('+')">+</button></td>
+    <td><button onclick="appendValue('-')">-</button></td>
+</tr>
+
+
+<tr>
+    <td><button onclick="appendValue('*')">*</button></td>
+    <td><button onclick="appendValue('/')">/</button></td>
+    <td><button onclick="calculate()">=</button></td>
+    <td><button onclick="clearInput()">clr</button></td>
+</tr>
+</table>
+</div>
+
+<br>
+<script>
+    function appendValue(value) {
+      document.getElementById('result').value += value;
+    }
+
+    function clearInput() {
+      document.getElementById('result').value = '';
+    }
+
+    function calculate() {
+      var result = eval(document.getElementById('result').value);
+      document.getElementById('result').value = result;
+    }
+  </script>
+  <br>
+
+<div>
+<form action="">
+  <div class="uif">
+      Enter Your Name: <input type="text"><br>
+      Enter Your Password: <input type="password"><br><br>
+      <div class="bt"><button>Log In </button></div>
+  </div>
+  </form>
+</div>
+<br>
+
+
+
+<div>
+
+
+  
+</div>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
