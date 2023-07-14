@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Calculator</title>
+  <style>
+    .calculator {
+      width: 200px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      text-align: center;
+    }
+    .calculator input {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+    .calculator button {
+      width: 48%;
+      margin: 2px;
+      padding: 10px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <div class="calculator">
+    <input type="text" id="result" readonly>
+    <button onclick="appendValue('7')">7</button>
+    <button onclick="appendValue('8')">8</button>
+    <button onclick="appendValue('9')">9</button>
+    <button onclick="appendValue('4')">4</button>
+    <button onclick="appendValue('5')">5</button>
+    <button onclick="appendValue('6')">6</button>
+    <button onclick="appendValue('1')">1</button>
+    <button onclick="appendValue('2')">2</button>
+    <button onclick="appendValue('3')">3</button>
+    <button onclick="appendValue('0')">0</button>
+    <button onclick="appendValue('.')">.</button>
+    <button onclick="clearInput()">C</button>
+    <button onclick="calculate()">=</button>
+    <button onclick="appendValue('+')">+</button>
+    <button onclick="appendValue('-')">-</button>
+    <button onclick="appendValue('*')">*</button>
+    <button onclick="appendValue('/')">/</button>
+  </div>
+
+  <script>
+    function appendValue(value) {
+      document.getElementById('result').value += value;
+    }
+
+    function clearInput() {
+      document.getElementById('result').value = '';
+    }
+
+    function calculate() {
+      var result = eval(document.getElementById('result').value);
+      document.getElementById('result').value = result;
+    }
+  </script>
+</body>
+</html>
